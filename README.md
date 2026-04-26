@@ -1,64 +1,59 @@
-# Next.js Starter
+# Aura AI — Chat Interface
 
-A modern **Next.js 15** starter project with:
+A complete, professional AI chat UI built with **Next.js 15**, TypeScript, and Tailwind CSS v4.
 
-- ⚡ **Next.js 15** – App Router
-- 🦾 **TypeScript** – Type-safe code
-- 🎨 **Tailwind CSS v4** – Utility-first styling
-- 🔍 **ESLint** – Code linting
-- 📦 **React 19** – Latest React
+## Features
+
+- 🌙 **Dark / Light mode** toggle
+- 💬 **Collapsible sidebar** with chat history
+- ⚡ **Typing indicator** with animation
+- 🎨 **Fully styled** with CSS variables design system
+- 📱 **Responsive** — works on mobile and desktop
+- 🔢 **Token counter** in the top bar
+- 🤖 **Model switcher** (Aura 3.5 Ultra, Sonnet, Flash, Vision)
+- ✨ **Empty state** with quick suggestion prompts
+
+## Tech Stack
+
+| Tool | Version |
+|---|---|
+| Next.js | 15.3.1 |
+| React | 19 |
+| TypeScript | 5 |
+| Tailwind CSS | 4 |
+| lucide-react | latest |
 
 ## Getting Started
-
-First, clone the repository:
 
 ```bash
 git clone https://github.com/elnaanah/nextjs-starter.git
 cd nextjs-starter
-```
-
-Install dependencies:
-
-```bash
 npm install
-# or
-yarn install
-# or
-pnpm install
-```
-
-Run the development server:
-
-```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000).
 
 ## Project Structure
 
 ```
-nextjs-starter/
-├── src/
-│   └── app/
-│       ├── layout.tsx      # Root layout with fonts & metadata
-│       ├── page.tsx        # Home page
-│       └── globals.css     # Global styles + Tailwind
-├── public/                 # Static assets
-├── next.config.ts          # Next.js configuration
-├── tsconfig.json           # TypeScript configuration
-├── postcss.config.mjs      # PostCSS configuration
-└── package.json
+src/
+├── app/
+│   ├── layout.tsx        # Root layout + fonts
+│   ├── page.tsx          # Entry point
+│   └── globals.css       # Design tokens + base styles
+├── components/
+│   ├── ChatLayout.tsx    # Main orchestrator
+│   ├── Sidebar.tsx       # Chat history sidebar
+│   ├── TopBar.tsx        # Header with model selector
+│   ├── Messages.tsx      # Message list + empty state
+│   └── InputArea.tsx     # Textarea + send button
+├── types/
+│   └── chat.ts           # TypeScript interfaces
+└── lib/
+    └── responses.ts      # Demo AI responses
 ```
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/elnaanah/nextjs-starter)
